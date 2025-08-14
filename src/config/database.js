@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import { config } from './config';
+import config from './config.js';
 
-export const connectDB = async (): Promise<void> => {
+export const connectDB = async () => {
   try {
     console.log('Connecting to MongoDB Atlas...');
     const conn = await mongoose.connect(config.MONGODB_URI, {
@@ -14,7 +14,7 @@ export const connectDB = async (): Promise<void> => {
   }
 };
 
-export const disconnectDB = async (): Promise<void> => {
+export const disconnectDB = async () => {
   try {
     await mongoose.disconnect();
     console.log('MongoDB Disconnected');

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "dotenvx run --quiet -- nodemon server.js",
+    "build": "echo 'No build step required'",
     "lint": "eslint 'src/**/*.js'",
     "lint:fix": "eslint 'src/**/*.js' --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
